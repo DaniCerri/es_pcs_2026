@@ -1,0 +1,15 @@
+# Cartelle con i build
+build/
+*/build/
+
+# Compilati ed eseguibili
+*.o
+*.obj
+*.exe
+*.out
+
+# File generati da CMake 
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
