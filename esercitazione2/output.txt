@@ -1,0 +1,23 @@
+Indirizzo di x: 60 -> 96
+Indirizzo di y: 5c -> 92
+
+Indirizzi di ad:
+  * Indirizzo di ad[0]: 90 -> 144
+  * Indirizzo di ad[1]: 98 -> 152
+  * Indirizzo di ad[2]: a0 -> 160
+  * Indirizzo di ad[3]: a8 -> 168
+
+Indirizzi di af:
+  * Indirizzo di af[0]: 70 -> 112
+  * Indirizzo di af[1]: 74 -> 116
+  * Indirizzo di af[2]: 78 -> 120
+  * Indirizzo di af[3]: 7c -> 124
+  * Indirizzo di af[4]: 80 -> 128
+  * Indirizzo di af[5]: 84 -> 132
+  * Indirizzo di af[6]: 88 -> 136
+  * Indirizzo di af[7]: 8c -> 140
+
+Indirizzi di ai:
+  * Indirizzo di ai[0]: 64 -> 100
+  * Indirizzo di ai[1]: 68 -> 104
+  * Indirizzo di ai[2]: 6c -> 108
