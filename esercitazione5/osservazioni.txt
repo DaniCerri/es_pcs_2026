@@ -1,0 +1,19 @@
+Ordinando un po' di vettori con i vari algoritmi, sia in
+modalita' Debug sia Release, e confrontando i tempi, si nota che
+bubblesort e' sempre il piu' lento, mentre insertionsort se la cava benissimo:
+in Release riesce a battere quicksort fino a vettori da circa 100-150
+elementi. Sotto quella soglia, in pratica, gli algoritmi quadratici
+"semplici" vincono perche' hanno meno costanti nascoste rispetto alla
+ricorsione di quicksort e mergesort. In Debug la soglia si abbassa,
+piu' o meno verso 30-50.
+
+Su questa base ho provato a fare una versione "ibrida" di quicksort che, quando
+la fetta da ordinare e' piu' piccola di 32 elementi, passa a
+insertionsort invece di continuare a ricorrere.
+
+Confrontando con std::sort sugli stessi dati, in Release ottengo:
+mergesort 7.7 ms, quicksort 4.5 ms, hybrid 4.0 ms, std::sort 3.1 ms.
+Quindi std::sort resta il piu' veloce. Mergesort e' invece sempre piu'
+lento di quicksort.
+
+

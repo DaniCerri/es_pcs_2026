@@ -1,0 +1,39 @@
+#include <cstdlib>
+#include <iostream>
+#include <string>
+#include <vector>
+#include "quick_sort.hpp"
+#include "utils.hpp"
+#include "randfiller.h"
+
+#define NUM_TESTS 100
+
+int main() {
+    randfiller rf;
+
+    std::vector<int> dims(NUM_TESTS);
+    rf.fill(dims, 1, 200);
+
+    for (int t = 0; t < NUM_TESTS; t++) {
+        std::vector<double> v(dims[t]);
+        rf.fill(v, -100.0, 100.0);
+        quick_sort(v, 0, (int)v.size() - 1);
+        if (!is_sorted(v)) {
+            std::cerr << "FAIL: test random #" << t << " (n=" << dims[t] << ")\n";
+            return EXIT_FAILURE;
+        }
+    }
+
+    std::vector<std::string> vs = {
+        "lorem", "ipsum", "dolor", "sit", "amet",
+        "consectetur", "adipiscing", "elit", "sed", "do"
+    };
+    quick_sort(vs, 0, (int)vs.size() - 1);
+    if (!is_sorted(vs)) {
+        std::cerr << "FAIL: test stringhe\n";
+        return EXIT_FAILURE;
+    }
+
+    std::cout << "quick_sort: tutti i test passati\n";
+    return EXIT_SUCCESS;
+}
